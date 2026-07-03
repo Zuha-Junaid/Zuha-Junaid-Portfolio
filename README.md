@@ -3,7 +3,7 @@
 A high-performance, crystal-clear interactive portfolio showcase built for modern web browsers. This portfolio features an ambient, responsive 3D particle landscape backdrop layered seamlessly behind architectural, blur-free user interface components.
 
 ## 🚀 Live Demo
-* **GitHub Pages / Vercel / Netlify:** zuha-junaid-portfolio.netlify.app
+* **GitHub Pages / Vercel / Netlify:** [zuha-junaid-portfolio.netlify.app](https://zuha-junaid-portfolio.netlify.app/)
 
 ---
 
