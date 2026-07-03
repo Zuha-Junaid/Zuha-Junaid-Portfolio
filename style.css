@@ -1,0 +1,93 @@
+/* --- 1. SYSTEM BASE ARCHITECTURE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f2fe;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.viewport-3d-context {
+    position: relative;
+    width: 100%;
+}
+
+/* --- 2. DYNAMIC LAYER MATRIX CONTAINER --- */
+.section {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Base rules for background vector outline tags */
+.scroll-word-3d {
+    position: absolute;
+    font-size: 8vw;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1; /* Sets layer natively behind foreground content vectors */
+    will-change: transform, opacity;
+    transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.1s linear;
+}
+
+/* Position Set 1: Top Right Rules (Home Viewport) */
+.word-top-right {
+    top: 4rem;
+    right: 5%;
+    transform-origin: right center;
+}
+
+/* Position Set 2: Bottom Right Rules (Safely below Project Grid Viewport) */
+.word-bottom-right {
+    bottom: -5rem;
+    right: 5%;
+    transform-origin: right center;
+}
+
+/* Position Set 3: Lower Left Rules (Safely below About & Contact Layout Blocks) */
+.word-bottom-left {
+    bottom: -5rem; 
+    left: 5%;
+    transform-origin: left center;
+}
+
+/* Foreground interaction grid containers */
+.content-container {
+    z-index: 20 !important; 
+    position: relative;
+}
+
+/* --- 3. ORIGINAL ANTI-BLUR LETTER OUTLINE STYLE --- */
+.text-outline-3d {
+    -webkit-text-stroke: 1.5px rgba(3, 27, 78, 0.15); 
+    color: transparent;
+    text-shadow: 0 10px 35px rgba(56, 189, 248, 0.08); 
+}
+
+/* --- 4. DECORATIVE NAVIGATION INTERACTION --- */
+.nav-dot {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-dot::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #031b4e;
+    transition: width 0.3s ease;
+}
+.nav-dot:hover::after {
+    width: 100%;
+}
